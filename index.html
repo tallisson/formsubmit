@@ -47,7 +47,17 @@
       <button class="btn btn-primary" type="submit">Enviar</button>
     </div>
     <input type="hidden" name="_subject" value="Nova Mensagem!">
-    <input type="hidden" name="_next" value="https://tallisson.github.io/formsubmit/pages/thanks.html">
+    <input type="hidden" name="_next">
+    <input type="hidden" name="_captcha" value="false">
   </form>
+
+  <script>
+    window.onload = () => {
+      const baseUrl = window.location.href.replace('/index.html', '');
+      const [inputNext] = document.getElementsByName('_next');
+      inputNext.value = `${baseUrl}/pages/thanks.html`;
+      console.log(inputNext);
+    }
+  </script>
 </body>
 </html>
