@@ -53,10 +53,9 @@
 
   <script>
     window.onload = () => {
-      const baseUrl = window.location.href.replace('/index.html', '');
+      const baseUrl = window.location.href.replace('index.html', '');
       const [inputNext] = document.getElementsByName('_next');
-      inputNext.value = `${baseUrl}/pages/thanks.html`;
-      console.log(inputNext);
+      inputNext.value = `${baseUrl}pages/thanks.html`;
     }
   </script>
 </body>
